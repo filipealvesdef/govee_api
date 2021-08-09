@@ -1,4 +1,4 @@
-import govee_api.device as dev
+import govee_api2.device as dev
 
 import abc
 

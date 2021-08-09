@@ -1,4 +1,4 @@
-import govee_api.api as gapi
+import govee_api2.api as gapi
 import abc
 import colour
 import math

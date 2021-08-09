@@ -1,4 +1,4 @@
-import govee_api.device_factory as dev_factory
+import govee_api2.device_factory as dev_factory
 
 import requests
 import time
