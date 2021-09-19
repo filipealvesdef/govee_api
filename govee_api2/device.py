@@ -223,6 +223,9 @@ class GoveeRgbLight(GoveeLight):
         green = 0
         blue = 0
 
+        if isinstance(val, str):
+            h = val.lstrip('#')
+            val = tuple(int(h[i:i+2], 16) for i in (0, 2, 4))
         if isinstance(val, colour.Color):
             if val == self.__color:
                 return
