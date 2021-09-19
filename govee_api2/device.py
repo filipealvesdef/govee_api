@@ -208,7 +208,9 @@ class GoveeRgbLight(GoveeLight):
         """ Sets the light color """
 
         if val:
-            red, green, blue = self._calc_color(val)
+            color = self._calc_color(val)
+            if not color: return
+            red, green, blue = color
 
             self._publish_command('color', {
                 'red': red,
@@ -230,7 +232,7 @@ class GoveeRgbLight(GoveeLight):
         elif isinstance(val, tuple) and len(val) == 3:
             if int(round(self.__color.red * 255)) == val[0] and \
                int(round(self.__color.get_green * 255)) == val[1] and \
-               int(round(self.__color.blue * 255)) == val[20]:
+               int(round(self.__color.blue * 255)) == val[2]:
                 return
             red = val[0]
             green = val[1]
