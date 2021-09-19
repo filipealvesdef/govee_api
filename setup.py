@@ -52,6 +52,6 @@ setup(
     test_suite='tests',
     tests_require=test_requirements,
     url='https://github.com/filipealvesdef/govee_api/tree/filipealves-setup-fixes',
-    version='1.2.3',
+    version='1.3.0',
     zip_safe=False,
 )
